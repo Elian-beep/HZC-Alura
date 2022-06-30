@@ -10,6 +10,7 @@ body{
 }
 
 .cabecalho{
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,10 +38,11 @@ body{
     flex-direction: column;
     background-color: #15191C;
     width: 75vw;
-    height: 100vh;
+    height: calc(100vh - 4rem);
     position: absolute;
     left: -100vw;
     transition: .25s;
+    border-right: 4px solid #959999;
 }
 
 .menu-lateral--ativo{
@@ -98,4 +100,84 @@ body{
 
 .menu-lateral__link--pinturas::before{
     content: "\e90a";
+}
+
+.principal{
+    padding: 24px 16px;
+}
+
+.titulo-pagina{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cartao{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.cartao__conteudo { 
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cartao__destaque{
+    grid-column: span 2;
+}
+
+.cartao__titulo{
+    font-size: 1.2rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.cartao__perfil{
+    color: #959990;
+    font-size: 0.9rem;
+    grid-column: span 2;
+}
+
+.cartao__info{
+    display: flex;
+    align-items: center;
+    color: #959990;
+}
+
+.cartao__info--tempo::before{
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao__info--visualizacao::before{
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.cartao__botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+
+.cartao__botao--play::before{
+    content: "\e90b";
+    font-size: 24px;
+}
+
+.cartao__botao--destaque{
+    width: 100%;
+    grid-column: span 2;
+}
+
+.cartao__botao--destaque::before{
+    margin-right: 8px;
 }
